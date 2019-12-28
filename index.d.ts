@@ -1,14 +1,16 @@
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Like Promise.all but voids the return value.
+ * @param promises The array of promises to void.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const pVoid = require("p-void");
+ *
+ * (async () => {
+ *     await pVoid([Promise.resolve("Hello"), Promise.resolve("World")])
+ *     //=> undefined
+ * })()
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function pVoid(promises: PromiseLike<any>[]): Promise<void>;
 
-export = theModule;
+export = pVoid;

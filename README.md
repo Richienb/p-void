@@ -1,41 +1,32 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# pVoid [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/p-void/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/p-void)
 
-My awesome module.
+Like `Promise.all` but voids the return value.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/p-void.png)](https://npmjs.com/package/p-void)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install p-void
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const pVoid = require("p-void");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+(async () => {
+    await pVoid([Promise.resolve("Hello"), Promise.resolve("World")])
+    //=> undefined
+})()
 ```
 
 ## API
 
-### theModule(input, options?)
+### pVoid(promises)
 
-#### input
+#### promises
 
-Type: `string`
+Type: `array`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The array of promises to void.
