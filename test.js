@@ -1,6 +1,6 @@
-import test from "ava"
-import pVoid from "."
+const test = require("ava")
+const pVoid = require(".")
 
-test("main", async (t) => {
-    t.is(await pVoid([Promise.resolve("Hello"), Promise.resolve("World")]), undefined)
+test("main", async t => {
+	t.is(await pVoid(Promise.resolve("Hello World!")), undefined)
 })

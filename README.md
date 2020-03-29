@@ -1,6 +1,6 @@
-# pVoid [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/p-void/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/p-void)
+# p-void [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/p-void/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/p-void)
 
-Like `Promise.all` but voids the return value.
+Void a promise return value.
 
 [![NPM Badge](https://nodei.co/npm/p-void.png)](https://npmjs.com/package/p-void)
 
@@ -16,17 +16,17 @@ npm install p-void
 const pVoid = require("p-void");
 
 (async () => {
-    await pVoid([Promise.resolve("Hello"), Promise.resolve("World")])
+    await pVoid(Promise.resolve("Hello World!"))
     //=> undefined
 })()
 ```
 
 ## API
 
-### pVoid(promises)
+### pVoid(promise)
 
-#### promises
+#### promise
 
-Type: `array`
+Type: `promise`
 
-The array of promises to void.
+The promise to void.

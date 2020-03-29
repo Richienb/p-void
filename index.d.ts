@@ -1,16 +1,16 @@
 /**
- * Like Promise.all but voids the return value.
- * @param promises The array of promises to void.
+ * Void a promise return value.
+ * @param promise The promise to void.
  * @example
  * ```
  * const pVoid = require("p-void");
  *
  * (async () => {
- *     await pVoid([Promise.resolve("Hello"), Promise.resolve("World")])
+ *     await pVoid(Promise.resolve("Hello World!"))
  *     //=> undefined
  * })()
  * ```
 */
-declare function pVoid(promises: PromiseLike<any>[]): Promise<void>;
+declare function pVoid(promise: PromiseLike<any>): Promise<void>
 
-export = pVoid;
+export = pVoid
