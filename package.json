@@ -1,6 +1,6 @@
 {
     "name": "p-void",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "Like Promise.all but voids the return value.",
     "repository": "https://github.com/Richienb/p-void.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
